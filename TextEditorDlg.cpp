@@ -326,7 +326,7 @@ void CTextEditorDlg::OnMenuOpen()
     // TODO: Add your control notification handler code here
 	//打开前对现有文本的的处理
 	isModified = m_Edit.GetModify();									//获取文本修改标记
-
+	//MessageBox("正在打开文件请稍等！");
     CString string;
 	m_Edit.GetWindowText(string);
 	if (isNew && string.IsEmpty())										//若是新建文本且文本无内容
@@ -894,7 +894,6 @@ void CTextEditorDlg::OnDropFiles(HDROP hDropInfo)
 void CTextEditorDlg::OpenFile()
 {
 	CString strCmdLine = GetCommandLine();
-
 	int totalLen = strCmdLine.GetLength();
 	int i = 0;
 	int index = 0;

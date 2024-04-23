@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include<iostream>
+#include <iostream>
 #include <iosfwd>
 #include <afxdlgs.h>
 #include <commdlg.h>
@@ -417,7 +417,6 @@ void TextEditor::Open() {
 		int iLength = WideCharToMultiByte(CP_ACP, 0, szBuffer, -1, NULL, 0, NULL, NULL); ;//CString,TCHAR汉字算一个字符，因此不用普通计算长度 
 		char* _char = new char[iLength + 1];
 		WideCharToMultiByte(CP_ACP, 0, szBuffer, -1, _char, iLength, NULL, NULL);
-
 		filepath = _char;
 		ifstream f(filepath.data(), ios::in | ios::binary);
 		int length;
